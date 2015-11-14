@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_purchase"
+    tools:context="edu.gatech.seclass.scm.PurchaseActivity">
+
+    <TextView
+        android:text="Make A Purchase"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/textView_purchase_Title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Customer ID:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_purchase_CustomerID"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="N/A"
+        android:id="@+id/dynamicView_purchase_CustomerID"
+        android:layout_alignBottom="@+id/textView_purchase_CustomerID"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:textSize="12dp" />
+
+    <TextView
+        android:text="Available Credits:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_purchase_AvailableCredits"
+        android:layout_below="@+id/textView_purchase_CustomerID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:id="@+id/dynamicView_purchase_Credits"
+        android:layout_alignBottom="@+id/textView_purchase_AvailableCredits"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:text="GOLD Status:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_purchase_GoldStatus"
+        android:layout_below="@+id/textView_purchase_AvailableCredits"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:id="@+id/dynamicView_purchase_GoldStatus"
+        android:layout_alignBottom="@+id/textView_purchase_GoldStatus"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:text="Cart Quantity"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_purchase_CartQuantity"
+        android:layout_below="@+id/textView_purchase_GoldStatus"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:text="Strawberry ($5):"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_purchase_SmoothieA"
+        android:layout_alignBottom="@+id/editText_purchase_SmoothieA"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:text="Banana ($5):"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_purchase_SmoothieB"
+        android:layout_alignBottom="@+id/editText_purchase_SmoothieB"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:text="Chocolate ($5):"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_purchase_SmoothieC"
+        android:layout_alignBottom="@+id/editText_purchase_SmoothieC"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:textSize="12dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/button_purchase_SmoothieADecrement"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/editText_purchase_SmoothieA"
+        android:layout_alignBottom="@+id/editText_purchase_SmoothieA"
+        android:layout_toLeftOf="@+id/editText_purchase_SmoothieA"
+        android:layout_toStartOf="@+id/editText_purchase_SmoothieA"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText_purchase_SmoothieA"
+        android:layout_below="@+id/textView_purchase_CartQuantity"
+        android:layout_toLeftOf="@+id/button_purchase_SmoothieAIncrement"
+        android:layout_toStartOf="@+id/button_purchase_SmoothieAIncrement"
+        android:gravity="center_horizontal"
+        android:maxLength="2"
+        android:text="0" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/button_purchase_SmoothieAIncrement"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/editText_purchase_SmoothieA"
+        android:layout_alignBottom="@+id/editText_purchase_SmoothieA"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/button_purchase_SmoothieBDecrement"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/editText_purchase_SmoothieB"
+        android:layout_alignBottom="@+id/editText_purchase_SmoothieB"
+        android:layout_toLeftOf="@+id/editText_purchase_SmoothieB"
+        android:layout_toStartOf="@+id/editText_purchase_SmoothieB"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText_purchase_SmoothieB"
+        android:layout_below="@+id/editText_purchase_SmoothieA"
+        android:layout_toLeftOf="@+id/button_purchase_SmoothieBIncrement"
+        android:layout_toStartOf="@+id/button_purchase_SmoothieBIncrement"
+        android:gravity="center_horizontal"
+        android:maxLength="2"
+        android:text="0" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/button_purchase_SmoothieBIncrement"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/editText_purchase_SmoothieB"
+        android:layout_alignBottom="@+id/editText_purchase_SmoothieB"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/button_purchase_SmoothieCDecrement"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/editText_purchase_SmoothieC"
+        android:layout_alignBottom="@+id/editText_purchase_SmoothieC"
+        android:layout_toLeftOf="@+id/editText_purchase_SmoothieC"
+        android:layout_toStartOf="@+id/editText_purchase_SmoothieC"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText_purchase_SmoothieC"
+        android:layout_below="@+id/editText_purchase_SmoothieB"
+        android:layout_toLeftOf="@+id/button_purchase_SmoothieCIncrement"
+        android:layout_toStartOf="@+id/button_purchase_SmoothieCIncrement"
+        android:gravity="center_horizontal"
+        android:maxLength="2"
+        android:text="0" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/button_purchase_SmoothieCIncrement"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/editText_purchase_SmoothieC"
+        android:layout_alignBottom="@+id/editText_purchase_SmoothieC"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/button_purchase_Update"
+        android:layout_below="@+id/button_purchase_SmoothieCDecrement"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:text="Total Price:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_purchase_TotalPrice"
+        android:layout_below="@+id/button_purchase_Update"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:id="@+id/dynamicView_purchase_TotalPrice"
+        android:layout_alignBottom="@+id/textView_purchase_TotalPrice"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:text="Remaining Credits:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_purchase_RemainingCredits"
+        android:layout_below="@+id/textView_purchase_TotalPrice"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:id="@+id/dynamicView_purchase_RemainingCredits"
+        android:layout_alignBottom="@+id/textView_purchase_RemainingCredits"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:textSize="12dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkout"
+        android:id="@+id/button_purchase_Checkout"
+        android:layout_above="@+id/button_purchase_Menu"
+        android:layout_alignRight="@+id/textView_purchase_Title"
+        android:layout_alignEnd="@+id/textView_purchase_Title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel And Return To Menu"
+        android:id="@+id/button_purchase_Menu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

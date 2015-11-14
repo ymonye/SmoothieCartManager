@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_ccprocessor"
+    tools:context="edu.gatech.seclass.scm.CCProcessorActivity">
+
+    <TextView
+        android:text="Summary"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/textView_ccprocessor_Title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Processing Credit Card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/dynamicView_ccprocessor_Status"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:text="Total Billed:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_ccprocessor_TotalPrice"
+        android:layout_below="@+id/dynamicView_ccprocessor_Status"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:id="@+id/dynamicView_ccprocessor_TotalPrice"
+        android:layout_alignBottom="@+id/textView_ccprocessor_TotalPrice"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:text="Credits Earned:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_ccprocessor_Credits"
+        android:layout_below="@+id/textView_ccprocessor_TotalPrice"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:id="@+id/dynamicView_ccprocessor_Credits"
+        android:layout_alignBottom="@+id/textView_ccprocessor_Credits"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:text="Gold Status:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/textView_ccprocessor_GoldStatus"
+        android:layout_below="@+id/textView_ccprocessor_Credits"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Achieved!"
+        android:id="@+id/dynamicView_ccprocessor_GoldStatus"
+        android:layout_below="@+id/textView_ccprocessor_GoldStatus"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textSize="50dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retry Sending Email For $5 Credit"
+        android:id="@+id/button_ccprocessor_CreditsEmail"
+        android:layout_above="@+id/button_ccprocessor_GoldStatusEmail"
+        android:layout_alignRight="@+id/textView_qr_Title"
+        android:layout_alignEnd="@+id/textView_qr_Title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retry Sending Email For Gold Status"
+        android:id="@+id/button_ccprocessor_GoldStatusEmail"
+        android:layout_above="@+id/button_ccprocessor_Retry"
+        android:layout_alignRight="@+id/textView_qr_Title"
+        android:layout_alignEnd="@+id/textView_qr_Title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retry Processing Credit Card"
+        android:id="@+id/button_ccprocessor_Retry"
+        android:layout_above="@+id/button_ccprocessor_Menu"
+        android:layout_alignRight="@+id/textView_qr_Title"
+        android:layout_alignEnd="@+id/textView_qr_Title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return To Menu"
+        android:id="@+id/button_ccprocessor_Menu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

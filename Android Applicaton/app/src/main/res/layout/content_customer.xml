@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_customer"
+    tools:context="edu.gatech.seclass.scm.CustomerActivity">
+
+    <TextView
+        android:text="Customer Information"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/textView_customer_Title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="First Name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_customer_FirstName"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:text="Last  Name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_customer_LastName"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="12dp"/>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText_customer_FirstName"
+        android:layout_below="@+id/textView_customer_FirstName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:nextFocusDown="@+id/editText_customer_LastName"
+        android:nextFocusLeft="@+id/editText_customer_LastName"
+        android:nextFocusRight="@+id/editText_customer_LastName"
+        android:nextFocusUp="@+id/editText_customer_LastName"
+        android:nextFocusForward="@+id/editText_customer_LastName"
+        android:textSize="14dp"/>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText_customer_LastName"
+        android:layout_below="@+id/textView_customer_LastName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:nextFocusDown="@+id/editText_customer_AddrStreet1"
+        android:nextFocusLeft="@+id/editText_customer_AddrStreet1"
+        android:nextFocusRight="@+id/editText_customer_AddrStreet1"
+        android:nextFocusUp="@+id/editText_customer_AddrStreet1"
+        android:nextFocusForward="@+id/editText_customer_AddrStreet1"
+        android:textSize="14dp"/>
+
+    <TextView
+        android:text="Billing Address:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_customer_BillingAddress"
+        android:layout_below="@+id/editText_customer_FirstName"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="12dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/editText_customer_AddrStreet1"
+        android:layout_below="@+id/textView_customer_BillingAddress"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:nextFocusDown="@+id/editText_customer_AddrStreet2"
+        android:nextFocusLeft="@+id/editText_customer_AddrStreet2"
+        android:nextFocusRight="@+id/editText_customer_AddrStreet2"
+        android:nextFocusUp="@+id/editText_customer_AddrStreet2"
+        android:nextFocusForward="@+id/editText_customer_AddrStreet2"
+        android:textSize="14dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/editText_customer_AddrStreet2"
+        android:layout_below="@+id/editText_customer_AddrStreet1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:nextFocusDown="@+id/editText_customer_AddrCity"
+        android:nextFocusLeft="@+id/editText_customer_AddrCity"
+        android:nextFocusRight="@+id/editText_customer_AddrCity"
+        android:nextFocusUp="@+id/editText_customer_AddrCity"
+        android:nextFocusForward="@+id/editText_customer_AddrCity"
+        android:textSize="14dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/editText_customer_AddrCity"
+        android:layout_below="@+id/editText_customer_AddrStreet2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:nextFocusDown="@+id/editText_customer_AddrState"
+        android:nextFocusLeft="@+id/editText_customer_AddrState"
+        android:nextFocusRight="@+id/editText_customer_AddrState"
+        android:nextFocusUp="@+id/editText_customer_AddrState"
+        android:nextFocusForward="@+id/editText_customer_AddrState"
+        android:textSize="14dp"/>
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/editText_customer_AddrState"
+        android:layout_below="@+id/editText_customer_AddrStreet2"
+        android:layout_toRightOf="@id/editText_customer_AddrCity"
+        android:nextFocusDown="@+id/editText_customer_AddrZip"
+        android:nextFocusLeft="@+id/editText_customer_AddrZip"
+        android:nextFocusRight="@+id/editText_customer_AddrZip"
+        android:nextFocusUp="@+id/editText_customer_AddrZip"
+        android:nextFocusForward="@+id/editText_customer_AddrZip"
+        android:maxLength="2"
+        android:gravity="center_horizontal"
+        android:textSize="14dp"/>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ems="10"
+        android:id="@+id/editText_customer_AddrZip"
+        android:layout_below="@+id/editText_customer_AddrStreet2"
+        android:layout_toRightOf="@+id/editText_customer_AddrState"
+        android:nextFocusDown="@+id/editText_customer_Email"
+        android:nextFocusLeft="@+id/editText_customer_Email"
+        android:nextFocusRight="@+id/editText_customer_Email"
+        android:nextFocusUp="@+id/editText_customer_Email"
+        android:nextFocusForward="@+id/editText_customer_Email"
+        android:inputType="number"
+        android:maxLength="5"
+        android:gravity="center_horizontal"
+        android:textSize="14dp"/>
+
+    <TextView
+        android:text="Email Address:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_customer_EmailAddress"
+        android:layout_below="@+id/editText_customer_AddrCity"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="12dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText_customer_Email"
+        android:layout_below="@+id/textView_customer_EmailAddress"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:nextFocusDown="@+id/editText_customer_09"
+        android:nextFocusLeft="@+id/editText_customer_09"
+        android:nextFocusRight="@+id/editText_customer_09"
+        android:nextFocusUp="@+id/editText_customer_09"
+        android:nextFocusForward="@+id/editText_customer_09"
+        android:textSize="14dp"/>
+
+    <TextView
+        android:text="Customer ID:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_customer_CustomerID"
+        android:layout_below="@+id/editText_customer_Email"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="N/A"
+        android:id="@+id/dynamicView_customer_CustomerID"
+        android:layout_alignBottom="@+id/textView_customer_CustomerID"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:textSize="12dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button_customer_Submit"
+        android:layout_above="@+id/button_customer_Menu"
+        android:layout_alignRight="@+id/textView_customer_Title"
+        android:layout_alignEnd="@+id/textView_customer_Title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel And Return To Menu"
+        android:id="@+id/button_customer_Menu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
